@@ -1,0 +1,16 @@
+[project]
+name = "ecg-training"
+version = "0.1.0"
+description = "ECG classification training with pretrained transformer backbone"
+readme = "README.md"
+requires-python = ">=3.9,<3.13"
+dependencies = [
+    "numpy<2.0",
+    "torch>=2.0",
+    "scikit-learn",
+    "fairseq",
+]
+
+[tool.uv]
+# fairseq-signals needs to be installed separately from GitHub:
+# uv pip install git+https://github.com/Jwoo5/fairseq-signals.git
