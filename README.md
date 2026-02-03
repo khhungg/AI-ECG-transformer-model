@@ -1,30 +1,30 @@
 # ECG Training
 
-使用預訓練 Transformer 模型進行 ECG 分類訓練。
+ECG classification training using a pretrained Transformer model.
 
-## 快速開始
+## Quick Start
 
 ```bash
-# 安裝 uv（如果還沒安裝）
+# Install uv (if not already installed)
 curl -LsSf https://astral.sh/uv/install.sh | sh
 source $HOME/.local/bin/env
 
-# 安裝依賴並執行訓練
+# Install dependencies and run training
 uv sync
 uv pip install git+https://github.com/Jwoo5/fairseq-signals.git
 uv run python train.py
 ```
 
-## 資料準備
+## Data Preparation
 
-執行前需準備以下檔案：
+Prepare the following files before running:
 
-| 檔案 | 說明 |
-|------|------|
-| `ecg_tensor_modified_excluded.pt` | ECG 訊號張量 |
-| `labels_tensor_new_corrected_excluded.pt` | 標籤張量 |
-| `ECG_FM/mimic_iv_ecg_physionet_pretrained.pt` | 預訓練模型權重 |
+| File | Description |
+|------|-------------|
+| `ecg_tensor_modified_excluded.pt` | ECG signal tensor |
+| `labels_tensor_new_corrected_excluded.pt` | Labels tensor |
+| `ECG_FM/mimic_iv_ecg_physionet_pretrained.pt` | Pretrained model weights |
 
-## 輸出
+## Output
 
-訓練好的模型會儲存在 `saved_models_tavi_transformer_excluded/` 資料夾中。
+The trained model will be saved in the `saved_models_tavi_transformer_excluded/` directory.
